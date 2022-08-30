@@ -8,13 +8,11 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-This is a starter project.  It is intended to be a core learning asset for the students
-who have enrolled the Design and Testing subject of the Software Engineering curriculum of the 
-University of Sevilla.  This project helps them start working on their new information system 
-projects.
+This is a Acme-Recipes project for september evaluation. This project is a Acme information system 
+project.
 
 To get this project up and running, please follow the appropriate guideline, taking into 
-account that you must link Acme-Framework-22.1 excluding the following resources:
+account that you must link Acme-Framework-22.7 excluding the following resources:
 
 - **/fragments/**
  
