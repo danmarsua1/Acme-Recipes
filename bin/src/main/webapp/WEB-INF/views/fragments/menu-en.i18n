@@ -1,0 +1,88 @@
+# menu-en.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+# master.menu #################################################################
+
+master.menu.home = Home
+master.menu.sign-up = Sign up
+master.menu.sign-in = Sign in
+master.menu.sign-out = Sign out
+
+# master.menu.anonymous #######################################################
+
+master.menu.anonymous = Anonymous
+master.menu.anonymous.favourite-link = Favourite link
+master.menu.anonymous.daniel-favourite-link = 53770131H: Martínez Suárez, Daniel Jesús
+master.menu.anonymous.bogdan-favourite-link = X7007380Q: Ștefan, Bogdan Marian
+master.menu.anonymous.luis-favourite-link = 29538040Z: Cerrato Sánchez, Luis
+master.menu.anonymous.ernesto-favourite-link = 29560995S: Gutiérrez Contreras, Ernesto
+master.menu.anonymous.regina-favourite-link = 47428394W: Escalera Martín, Regina
+master.menu.anonymous.jose-favourite-link = 49123130Y: Lobato Troncoso, Jose Manuel
+
+# master.menu.administrator ###################################################
+
+master.menu.administrator = Administrator
+master.menu.administrator.dashboard = Dashboard
+master.menu.administrator.configuration=Configuration
+master.menu.administrator.user-accounts = User accounts
+master.menu.administrator.populate-initial = Populate DB (initial)
+master.menu.administrator.populate-sample = Populate DB (samples)
+master.menu.administrator.shut-down = Shut down
+
+# master.menu.inventor ########################################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.items = Items
+master.menu.inventor.toolkits = List toolkits
+master.menu.inventor.toolkits.create = Create toolkit
+master.menu.inventor.patronages = Patronages
+master.menu.inventor.patronage-reports = Patronage reports
+
+# master.menu.provider ########################################################
+
+master.menu.provider = Provider
+master.menu.provider.favourite-link = Favourite link
+
+# master.menu.consumer ##########################################################
+
+master.menu.consumer = Consumer
+master.menu.consumer.favourite-link = Favourite link
+
+# master.menu.patron ##########################################################
+
+master.menu.patron = Patron
+master.menu.patron.patronages = Patronages
+master.menu.patron.dashboard = Dashboard
+master.menu.patron.patronage-reports = Patronage Report
+
+# master.menu.user-account ####################################################
+
+master.menu.user-account = Account
+master.menu.user-account.general-data = General data
+master.menu.user-account.provider = Provider data
+master.menu.user-account.become-provider = Become a provider
+master.menu.user-account.consumer = Consumer data
+master.menu.user-account.become-consumer = Become a consumer
+
+# master.menu.any ####################################################
+
+master.menu.any = Any
+master.menu.any.user-accounts = User Accounts
+master.menu.any.toolkits = Toolkits 
+master.menu.any.item = Items
+master.menu.any.chirp = Chirp
+master.menu.any.favourite-link = Favourite link
+
+# master.menu.authenticated ####################################################
+
+master.menu.authenticated = Authenticated
+master.menu.authenticated.announcement = Announcements
+master.menu.authenticated.configuration = Configuration
+

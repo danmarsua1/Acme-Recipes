@@ -1,0 +1,48 @@
+# i18n-es.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.dashboard.form.title.general-indicators = Indicadores generales
+administrator.dashboard.form.title.total-number-of-items = Numero total de items
+administrator.dashboard.form.title.total-number-of-patronages = Numero de patrocinios
+
+administrator.dashboard.form.label.total-number-of-components = Numero total de componentes
+administrator.dashboard.form.label.average-retail-price-of-components= Media precio venta al publico de los componentes
+administrator.dashboard.form.label.deviation-retail-price-of-components= Desviacion precio venta al publico de los componentes
+administrator.dashboard.form.label.minimum-retail-price-of-components= Minimo precio venta al publico de los componentes
+administrator.dashboard.form.label.maximum-retail-price-of-components= Maximo precio venta al publico de los componentes
+administrator.dashboard.form.label.total-number-of-tools = Numero total de herramientas
+administrator.dashboard.form.label.average-retail-price-of-components= Media precio venta al publico de las herramientas
+administrator.dashboard.form.label.deviation-retail-price-of-components= Desviacion precio venta al publico de las herramientas
+administrator.dashboard.form.label.minimum-retail-price-of-components= Minimo precio venta al publico de las herramientas
+administrator.dashboard.form.label.maximum-retail-price-of-components= Maximo precio venta al publico de las herramientas
+
+administrator.dashboard.form.label.total-number-of-proposed-patronages= Numero total de patrocinios propuestos
+administrator.dashboard.form.label.total-number-of-accepted-patronages = Numero total de patrocinios aceptados
+administrator.dashboard.form.label.total-number-of-denied-patronages = Numero total de patrocinios denegados
+
+administrator.dashboard.form.label.average-budget-of-proposed-patronages = Media del presupuesto de los patrocinios propuestos
+administrator.dashboard.form.label.deviation-budget-of-proposed-patronages = Desviacion del presupuesto de los patrocinios propuestos
+administrator.dashboard.form.label.minimum-budget-of-proposed-patronages =Minimo del presupuesto de los patrocinios propuestos
+administrator.dashboard.form.label.maximum-budget-of-proposed-patronages= Maximo del presupuesto de los patrocinios propuestos
+
+administrator.dashboard.form.label.average-budget-of-accepted-patronages =Media del presupuesto de los patrocinios aceptados
+administrator.dashboard.form.label.deviation-budget-of-accepted-patronages = Desviacion del presupuesto de los patrocinios aceptados
+administrator.dashboard.form.label.minimum-budget-of-accepted-patronages=Minimo del presupuesto de los patrocinios aceptados
+administrator.dashboard.form.label.maximum-budget-of-accepted-patronages=Maximo del presupuesto de los patrocinios aceptados
+
+administrator.dashboard.form.label.average-budget-of-denied-patronages= Media del presupuesto de los patrocinios denegados
+administrator.dashboard.form.label.deviation-budget-of-denied-patronages=Desviacion del presupuesto de los patrocinios denegados
+administrator.dashboard.form.label.minimum-budget-of-denied-patronages=Minimo del presupuesto de los patrocinios denegados
+administrator.dashboard.form.label.maximum-budget-of-denied-patronages =Maximo del presupuesto de los patrocinios denegados
+
+administrator.dashboard.form.label.average-number-jobs-employer =  Número medio de trabajos por empleador
+administrator.dashboard.form.label.average-number-applications-worker =  Número medio de solicitudes por trabajador
+administrator.dashboard.form.label.average-number-applications-employer = Número medio de solicitudes por empleador
+

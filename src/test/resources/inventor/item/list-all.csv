@@ -1,0 +1,7 @@
+recordIndex,type,name,code,technology,description,retailPrice,link,publish
+5,COMPONENT,Item1,AAA-101-A,C++,C++ is a compiled language,USD 10.00,https://www.item.com,false
+4,COMPONENT,Item2,AAA-102-A,Python,Python is a interpreted language,GBP 18.00,https://www.item.com,false
+3,TOOL,Item3,AAA-103-A,Eclipse,Eclipse is a IDE for developing,EUR 6.00,https://www.item.com,true
+2,TOOL,Item4,AAA-104-A,C++,C++ is a compiled language,GBP 33.70,https://www.item.com,false
+1,COMPONENT,Item5,AAA-105-A,Java,Java is a object oriented programming language,USD 82.00,https://www.item.com,true
+0,TOOL,Item7,AAA-106-A,Ruby,Ruby is a scripting language designed for front-end and back-end web development,EUR 13.00,https://www.item.com,true

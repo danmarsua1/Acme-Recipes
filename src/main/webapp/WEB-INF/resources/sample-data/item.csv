@@ -1,0 +1,7 @@
+key,type,name,code,technology,description,retail-price,link,publish,key:inventor
+item-01,COMPONENT,Item1,AAA-101-A,C++,C++ is a compiled language,USD 10.0,https://www.item.com,false,inventor-01
+item-02,COMPONENT,Item2,AAA-102-A,Python,Python is a interpreted language,GBP 18.0,https://www.item.com,false,inventor-01
+item-03,TOOL,Item3,AAA-103-A,Eclipse,Eclipse is a IDE for developing,EUR 6.0,https://www.item.com,true,inventor-01
+item-04,TOOL,Item4,AAA-104-A,C++,C++ is a compiled language,GBP 33.7,https://www.item.com,false,inventor-01
+item-05,COMPONENT,Item5,AAA-105-A,Java,Java is a object oriented programming language,USD 82.0,https://www.item.com,true,inventor-01
+item-06,TOOL,Item7,AAA-106-A,Ruby,Ruby is a scripting language designed for front-end and back-end web development,EUR 13.0,https://www.item.com,true,inventor-01

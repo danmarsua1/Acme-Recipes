@@ -1,0 +1,4 @@
+key,code,title,description,assembly-notes,publish,link
+toolkit-01,AAA-111-A,Toolkit,The Good School Toolkit,Notes,true,https://www.toolkit1.com
+toolkit-02,BBB-111-B,Toolkit,The Bad School Toolkit,Notes,false,https://www.toolkit2.com
+toolkit-03,CCC-111-C,Toolkit,The Regular School Toolkit,Notes,true,https://www.toolkit3.com

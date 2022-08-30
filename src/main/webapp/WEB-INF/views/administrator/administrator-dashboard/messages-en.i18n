@@ -1,0 +1,48 @@
+# i18n-en.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.dashboard.form.title.general-indicators = General indicators
+administrator.dashboard.form.title.total-number-of-items = Total number of items
+administrator.dashboard.form.title.total-number-of-patronages = Number of patronages 
+ 
+administrator.dashboard.form.label.total-number-of-components = Total number of components
+administrator.dashboard.form.label.total-number-of-tools = Total number of tools
+administrator.dashboard.form.label.average-retail-price-of-components= Average retail price of components
+administrator.dashboard.form.label.deviation-retail-price-of-components= Deviation retail price of components
+administrator.dashboard.form.label.minimum-retail-price-of-components= Minimum retail price of components
+administrator.dashboard.form.label.maximum-retail-price-of-components= Maximum retail price of components
+administrator.dashboard.form.label.average-retail-price-of-tools= Average retail price of tools
+administrator.dashboard.form.label.deviation-retail-price-of-tools= Deviation retail price of tools
+administrator.dashboard.form.label.minimum-retail-price-of-tools= Minimum retail price of tools
+administrator.dashboard.form.label.maximum-retail-price-of-tools= Maximum retail price of tools
+
+administrator.dashboard.form.label.total-number-of-proposed-patronages= Total number of proposed patronages
+administrator.dashboard.form.label.total-number-of-accepted-patronages = Total number of accepted patronages
+administrator.dashboard.form.label.total-number-of-denied-patronages = Total number of denied patronages
+
+administrator.dashboard.form.label.average-budget-of-proposed-patronages = Average budget of proposed patronages
+administrator.dashboard.form.label.deviation-budget-of-proposed-patronages = Deviation budget of proposed patronages
+administrator.dashboard.form.label.minimum-budget-of-proposed-patronages =Minimum budget of proposed patronages
+administrator.dashboard.form.label.maximum-budget-of-proposed-patronages= Maximum budget of proposed patronages
+
+administrator.dashboard.form.label.average-budget-of-accepted-patronages =Average budget of accepted patronages
+administrator.dashboard.form.label.deviation-budget-of-accepted-patronages = Deviation budget of accepted patronages
+administrator.dashboard.form.label.minimum-budget-of-accepted-patronages=Minimum budget of accepted patronages
+administrator.dashboard.form.label.maximum-budget-of-accepted-patronages=Maximum budget of accepted patronages
+
+administrator.dashboard.form.label.average-budget-of-denied-patronages= Average budget of accepted patronages
+administrator.dashboard.form.label.deviation-budget-of-denied-patronages=Deviation budget of denied patronages
+administrator.dashboard.form.label.minimum-budget-of-denied-patronages=Minimum budget of denied patronages
+administrator.dashboard.form.label.maximum-budget-of-denied-patronages =Maximum budget of denied patronages
+
+administrator.dashboard.form.label.average-number-jobs-employer =  Average number of jobs per employer
+administrator.dashboard.form.label.average-number-applications-worker =  Average number of applications per worker
+administrator.dashboard.form.label.average-number-applications-employer = Average number of applications per employer
+

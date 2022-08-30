@@ -1,0 +1,15 @@
+recordIndex,type,name,code,technology,description,retailPrice,link
+0,COMPONENT,Item0,AAA-110-A,Ruby,Ruby it's a robust dynamically typed object-oriented language,GBP 67.70,https://www.item0.com
+1,COMPONENT,Item1,AAA-111-A,PHP,PHP is an open-source server-side scripting language,EUR 20.50,https://www.item1.com
+2,COMPONENT,Item2,AAA-112-A,Elm,Elm is a domain-specific programming language,USD 45.00,https://www.item2.com
+3,COMPONENT,Item3,AAA-113-A,Arduino,Arduino is programmed with a c/c++ 'dialect',GBP 3.00,https://www.item3.com
+4,COMPONENT,Item4,AAA-114-A,Python,Python is a interpreted language,EUR 18.50,https://www.item4.com
+5,COMPONENT,Item5,AAA-115-A,C++,C++ is a compiled language,USD 45.00,https://www.item5.com
+6,COMPONENT,Item6,AAA-116-A,Java,Java is a object oriented programming language,GBP 18.00,https://www.item6.com
+7,TOOL,Item7,AAA-117-A,Tool 7,Description of Tool 7,EUR 5.00,https://www.item7.com
+8,TOOL,Item8,AAA-118-A,Tool 8,Description of Tool 8,USD 20.00,https://www.item8.com
+9,TOOL,Item9,AAA-119-A,Tool 9,Description of Tool 9,GBP 15.00,https://www.item9.com
+10,TOOL,Item10,AAA-120-A,Tool 10,Description of Tool 10,EUR 10.38,https://www.item10.com
+11,TOOL,Item11,AAA-121-A,Tool 11,Description of Tool 11,USD 6.00,https://www.item11.com
+12,TOOL,Item12,AAA-122-A,Tool 12,Description of Tool 12,GBP 33.70,https://www.item12.com
+13,TOOL,Item13,AAA-123-A,Tool 13,Description of Tool 13,EUR 18.50,https://www.item13.com

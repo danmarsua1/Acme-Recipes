@@ -1,0 +1,15 @@
+recordIndex,type,name,code,technology,description,retailPrice,link
+0,COMPONENT,,,,,,
+1,COMPONENT,Item1,,,,,
+2,COMPONENT,Item2,AAA-112-A,,,,
+3,COMPONENT,Item3,AAA-113-A,Arduino,,,
+4,COMPONENT,Item4,AAA-114-A,Python,Python is a interpreted language,,
+5,COMPONENT,Item5,AAA-115-A,C++,C++ is a compiled language,USD -45.00,
+6,COMPONENT,Item6,AAA-116-A,Java,Java is a object oriented programming language,GBP 18.00,https://www.item6.com
+7,TOOL,,,,,,
+8,TOOL,Item8,,,,,
+9,TOOL,Item9,AAA-119-A,,,,
+10,TOOL,Item10,AAA-120-A,Tool 10,,,
+11,TOOL,Item11,AAA-121-A,Tool 11,Description of Tool 11,,
+12,TOOL,Item12,AAA-122-A,Tool 12,Description of Tool 12,GBP 33.70,
+13,TOOL,Item13,AAA-123-A,Tool 13,Description of Tool 13,EUR 18.50,https://www.item13.com

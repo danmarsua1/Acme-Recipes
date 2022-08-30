@@ -1,0 +1,4 @@
+recordIndex,type,name,code,technology,description,retailPrice,link
+2,COMPONENT,Item1,AAA-111-A,C++,C++ is a compiled language,GBP 10.00,https://www.item1.com
+1,COMPONENT,Item2,AAA-112-A,Python,Python is a interpreted language,GBP 18.00,https://www.item2.com
+0,TOOL,Item4,AAA-114-A,Item 4,Description of Item 4,GBP 33.70,https://www.item4.com

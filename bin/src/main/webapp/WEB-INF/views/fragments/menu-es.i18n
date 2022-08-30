@@ -1,0 +1,88 @@
+# menu-es.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+﻿# master.menu #################################################################
+
+master.menu.home = Inicio
+master.menu.sign-up = Registrarse
+master.menu.sign-in = Entrar
+master.menu.sign-out = Salir
+
+# master.menu.anonymous #######################################################
+
+master.menu.anonymous = Anónimo
+master.menu.anonymous.favourite-link = Enlace favorito
+master.menu.anonymous.daniel-favourite-link = 53770131H: Martínez Suárez, Daniel Jesús
+master.menu.anonymous.bogdan-favourite-link = X7007380Q: Ștefan, Bogdan Marian
+master.menu.anonymous.luis-favourite-link = 29538040Z: Cerrato Sánchez, Luis
+master.menu.anonymous.ernesto-favourite-link = 29560995S: Gutiérrez Contreras, Ernesto
+master.menu.anonymous.regina-favourite-link = 47428394W: Escalera Martín, Regina
+master.menu.anonymous.jose-favourite-link = 49123130Y: Lobato Troncoso, Jose Manuel
+
+# master.menu.administrator ###################################################
+
+master.menu.administrator = Administrador
+master.menu.administrator.dashboard = Panel de indicadores
+master.menu.administrator.configuration=Configuracion
+master.menu.administrator.user-accounts = Cuentas de usuario
+master.menu.administrator.populate-initial = Poblar BD (inicial)
+master.menu.administrator.populate-sample = Poblar BD (ejemplos)
+master.menu.administrator.shut-down = Parar el sistema
+
+# master.menu.inventor ########################################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.items = Items
+master.menu.inventor.toolkits = Listar kits de herramientas
+master.menu.inventor.toolkits.create = Crear kit de herramientas
+master.menu.inventor.patronages = Patrocinios
+master.menu.inventor.patronage-reports = Reportes de los patrocinios
+
+# master.menu.provider ########################################################
+
+master.menu.provider = Proveedor
+master.menu.provider.favourite-link = Enlace favorito
+
+# master.menu.consumer ##########################################################
+
+master.menu.consumer = Consumidor
+master.menu.consumer.favourite-link = Enlace favorito
+
+# master.menu.patron ##########################################################
+
+master.menu.patron = Patrón
+master.menu.patron.patronages = Patrocinios
+master.menu.patron.dashboard = Panel de indicadores
+master.menu.patron.patronage-reports = Informe de patrocinios
+
+# master.menu.user-account ####################################################
+
+master.menu.user-account = Cuenta
+master.menu.user-account.general-data = Datos generales
+master.menu.user-account.provider = Datos de proveedor
+master.menu.user-account.become-provider = Hazte proveedor
+master.menu.user-account.consumer = Datos de consumidor
+master.menu.user-account.become-consumer = Hazte consumidor
+
+# master.menu.any #######################################################
+
+master.menu.any = Cualquiera
+master.menu.any.user-account = Cuentas de usuario
+master.menu.any.toolkits = Kits de herramientas 
+master.menu.any.item = Ítems
+master.menu.any.chirp = Chirp
+master.menu.any.favourite-link = Enlace favorito
+master.menu.any.configuration = Configuración
+
+# master.menu.authenticated ####################################################
+
+master.menu.authenticated = Authenticated
+master.menu.authenticated.announcement = Anuncios
+master.menu.authenticated.configuration = Configuración
