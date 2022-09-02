@@ -1,10 +1,11 @@
-package acme.forms.patron;
+package acme.features.patron.dashboard;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import acme.forms.patron.PatronDashboard;
 import acme.framework.controllers.AbstractController;
 import acme.roles.Patron;
 

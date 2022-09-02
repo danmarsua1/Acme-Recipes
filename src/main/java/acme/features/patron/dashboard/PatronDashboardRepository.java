@@ -1,4 +1,4 @@
-package acme.forms.patron;
+package acme.features.patron.dashboard;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
