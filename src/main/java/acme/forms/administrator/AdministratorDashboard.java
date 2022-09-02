@@ -1,6 +1,7 @@
 package acme.forms.administrator;
 
 import java.io.Serializable;
+import java.util.List;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,23 +14,23 @@ public class AdministratorDashboard implements Serializable {
 
 	Integer						totalNumberOfComponents;
 
-	Double						averageRetailPriceOfComponents;
+	List<Object>						averageRetailPriceOfComponents;
 
-	Double						deviationRetailPriceOfComponents;
+	List<Object>						deviationRetailPriceOfComponents;
 
-	Double						minimumRetailPriceOfComponents;
+	List<Object>						minimumRetailPriceOfComponents;
 
-	Double						maximumRetailPriceOfComponents;
+	List<Object>						maximumRetailPriceOfComponents;
 
 	Integer						totalNumberOfTools;
 
-	Double						averageRetailPriceOfTools;
+	List<Object>						averageRetailPriceOfTools;
 
-	Double						deviationRetailPriceOfTools;
+	List<Object>						deviationRetailPriceOfTools;
 
-	Double						minimumRetailPriceOfTools;
+	List<Object>						minimumRetailPriceOfTools;
 
-	Double						maximumRetailPriceOfTools;
+	List<Object>						maximumRetailPriceOfTools;
 
 	Integer						totalNumberOfProposedPatronages;
 
@@ -37,28 +38,28 @@ public class AdministratorDashboard implements Serializable {
 
 	Integer						totalNumberOfDeniedPatronages;
 
-	Double						averageBudgetOfProposedPatronages;
+	List<Object>						averageBudgetOfProposedPatronages;
 
-	Double						deviationBudgetOfProposedPatronages;
+	List<Object>						deviationBudgetOfProposedPatronages;
 
-	Double						minimumBudgetOfProposedPatronages;
+	List<Object>						minimumBudgetOfProposedPatronages;
 
-	Double						maximumBudgetOfProposedPatronages;
+	List<Object>						maximumBudgetOfProposedPatronages;
 
-	Double						averageBudgetOfAcceptedPatronages;
+	List<Object>						averageBudgetOfAcceptedPatronages;
 
-	Double						deviationBudgetOfAcceptedPatronages;
+	List<Object>						deviationBudgetOfAcceptedPatronages;
 
-	Double						minimumBudgetOfAcceptedPatronages;
+	List<Object>						minimumBudgetOfAcceptedPatronages;
 
-	Double						maximumBudgetOfAcceptedPatronages;
+	List<Object>						maximumBudgetOfAcceptedPatronages;
 
-	Double						averageBudgetOfDeniedPatronages;
+	List<Object>						averageBudgetOfDeniedPatronages;
 
-	Double						deviationBudgetOfDeniedPatronages;
+	List<Object>						deviationBudgetOfDeniedPatronages;
 
-	Double						minimumBudgetOfDeniedPatronages;
+	List<Object>						minimumBudgetOfDeniedPatronages;
 
-	Double						maximumBudgetOfDeniedPatronages;
+	List<Object>						maximumBudgetOfDeniedPatronages;
 
 }

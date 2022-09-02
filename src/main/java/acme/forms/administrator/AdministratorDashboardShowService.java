@@ -1,5 +1,7 @@
 package acme.forms.administrator;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,17 +29,17 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		
 		// Manage COMPONENTS
 		Integer totalNumberOfComponents;
-		Double averageRetailPriceOfComponents;
-		Double deviationRetailPriceOfComponents;
-		Double minimumRetailPriceOfComponents;
-		Double maximumRetailPriceOfComponents;
+		List<Object> averageRetailPriceOfComponents;
+		List<Object> deviationRetailPriceOfComponents;
+		List<Object> minimumRetailPriceOfComponents;
+		List<Object> maximumRetailPriceOfComponents;
 		
 		// Manage TOOLS
 		Integer totalNumberOfTools;
-		Double averageRetailPriceOfTools;
-		Double deviationRetailPriceOfTools;
-		Double minimumRetailPriceOfTools;
-		Double maximumRetailPriceOfTools;
+		List<Object> averageRetailPriceOfTools;
+		List<Object> deviationRetailPriceOfTools;
+		List<Object> minimumRetailPriceOfTools;
+		List<Object> maximumRetailPriceOfTools;
 		
 		// Manage TOTALS
 		Integer totalNumberOfProposedPatronages;
@@ -45,22 +47,22 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		Integer totalNumberOfDeniedPatronages;
 
 		// Manage PROPOSED
-		Double averageBudgetOfProposedPatronages;
-		Double deviationBudgetOfProposedPatronages;
-		Double minimumBudgetOfProposedPatronages;
-		Double maximumBudgetOfProposedPatronages;
+		List<Object> averageBudgetOfProposedPatronages;
+		List<Object> deviationBudgetOfProposedPatronages;
+		List<Object> minimumBudgetOfProposedPatronages;
+		List<Object> maximumBudgetOfProposedPatronages;
 
 		// Manage ACCEPTED
-		Double averageBudgetOfAcceptedPatronages;
-		Double deviationBudgetOfAcceptedPatronages;
-		Double minimumBudgetOfAcceptedPatronages;
-		Double maximumBudgetOfAcceptedPatronages;
+		List<Object> averageBudgetOfAcceptedPatronages;
+		List<Object> deviationBudgetOfAcceptedPatronages;
+		List<Object> minimumBudgetOfAcceptedPatronages;
+		List<Object> maximumBudgetOfAcceptedPatronages;
 
 		// Manage DENIED
-		Double averageBudgetOfDeniedPatronages;
-		Double deviationBudgetOfDeniedPatronages;
-		Double minimumBudgetOfDeniedPatronages;
-		Double maximumBudgetOfDeniedPatronages;
+		List<Object> averageBudgetOfDeniedPatronages;
+		List<Object> deviationBudgetOfDeniedPatronages;
+		List<Object> minimumBudgetOfDeniedPatronages;
+		List<Object> maximumBudgetOfDeniedPatronages;
 		
 		
 		totalNumberOfComponents = this.repository.totalNumberOfComponents();
