@@ -612,11 +612,11 @@ bg=green</panel_attributes>
       <h>91</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Announcement
+Bulletin
 --
-+ creationMoment: Date {Past}
-+ title: String {NotBlank,Length(1,100)}
-+ body: String {NotBlank,Length(1,255)}
++ instantiationMoment: Date {Past}
++ heading: String {NotBlank,Length(1,100)}
++ text: String {NotBlank,Length(1,255)}
 + flag: boolean
 + link: String {Url} [0..1]
 

@@ -92,5 +92,5 @@ master.menu.any.configuration = Configuración
 # master.menu.authenticated ####################################################
 
 master.menu.authenticated = Authenticated
-master.menu.authenticated.announcement = Anuncios
+master.menu.authenticated.bulletin = Boletines
 master.menu.authenticated.configuration = Configuración

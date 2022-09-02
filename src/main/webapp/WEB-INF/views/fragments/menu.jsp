@@ -72,7 +72,7 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="hasRole('Authenticated')">
-			<acme:menu-suboption code="master.menu.authenticated.announcement" action="/authenticated/announcement/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.bulletin" action="/authenticated/bulletin/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.configuration" action="/authenticated/configuration/show"/>
 		</acme:menu-option>
 

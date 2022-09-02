@@ -16,14 +16,11 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:input-textbox code="administrator.announcement.form.label.title" path="title"/>
-	<acme:input-textarea code="administrator.announcement.form.label.body" path="body"/>
-	<acme:input-textbox code="administrator.announcement.form.label.flag" path="flag"/>
-	<acme:input-textbox code="administrator.announcement.form.label.link" path="link"/>
+	<acme:input-moment code="authenticated.bulletin.form.label.instantiation-moment" path="instantiationMoment"/>
+	<acme:input-textbox code="authenticated.bulletin.form.label.heading" path="heading"/>
+	<acme:input-textarea code="authenticated.bulletin.form.label.text" path="text"/>
+	<acme:input-textbox code="authenticated.bulletin.form.label.flag" path="flag"/>
+	<acme:input-textbox code="authenticated.bulletin.form.label.link" path="link"/>
 	
-	
-	<acme:input-checkbox code="administrator.announcement.form.label.confirmation" path="confirmation"/>
-	<acme:submit code="administrator.announcement.form.button.create"
-					action="/administrator/announcement/create"/>
 	
 </acme:form>
