@@ -3,6 +3,7 @@ package acme.features.inventor.patronageReports;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -46,15 +47,20 @@ public class InventorPatronageReportConfirmService implements AbstractCreateServ
 		Calendar calendar;
 		Patronage patronage;
 		int patronageId;
+		int patronageReportLastId = 0;
 
 		result = new PatronageReport();
+		
+		patronageReportLastId = this.repository.findLastPatronageReport().get(0) != null 
+				? this.repository.findLastPatronageReport().get(0).getId() 
+				: patronageReportLastId;
 
 		// Manage unique code
 		String ticker = "";
 
 		do
-			ticker = this.createTicker();
-		while (!this.isTickerUnique(ticker));
+			ticker = this.createTicker(patronageReportLastId+1);
+		while (!this.isTickerUnique(ticker,patronageReportLastId+1));
 		result.setSequenceNumber(ticker);
 
 		moment = new Date();
@@ -119,37 +125,37 @@ public class InventorPatronageReportConfirmService implements AbstractCreateServ
 
 	// Other business methods -------------------------
 
-	public String numbersSecuency() {
+	public String createTicker(int patronageReportId) {
 
-		final char[] elementos = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-
-		final char[] conjunto = new char[4];
-
-		final String secuency;
-
-		for (int i = 0; i < 4; i++) {
-			final int el = (int) (Math.random() * 9);
-			conjunto[i] = elementos[el];
+		// The ticker must be as follow: X...:XXXX
+		String ticker = "";
+		String sequence = "";
+		List<PatronageReport> listPatronageReport = this.repository.findAllPatronageReports();
+		String auxSequence = Integer.toString(listPatronageReport.size()+1);
+		
+		switch(auxSequence.length()) {
+			case 1:
+				sequence = "000"+auxSequence;
+				break;
+			case 2:
+				sequence = "00"+auxSequence;
+				break;
+			case 3:
+				sequence = "0"+auxSequence;
+				break;
+			default:
+				sequence = auxSequence;
+				break;
 		}
-
-		secuency = new String(conjunto);
-		return secuency;
-
-	}
-
-	public String createTicker() {
-
-		// The ticker must be as follow:XXXX
-		String ticker = new String();
-
+		
 		// Set ticker format
-		ticker = this.numbersSecuency();
+		ticker = Integer.toString(patronageReportId)+ ":" + sequence;
 
 		return ticker;
 
 	}
 
-	public boolean isTickerUnique(final String ticker) {
+	public boolean isTickerUnique(final String ticker,final int patronageReportId) {
 
 		Boolean result = true;
 
@@ -163,7 +169,7 @@ public class InventorPatronageReportConfirmService implements AbstractCreateServ
 
 		if (tickers.contains(ticker)) {
 			result = false;
-			this.createTicker();
+			this.createTicker(patronageReportId);
 		}
 
 		return result;
