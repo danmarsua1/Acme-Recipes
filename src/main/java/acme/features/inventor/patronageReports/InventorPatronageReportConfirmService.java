@@ -1,6 +1,5 @@
 package acme.features.inventor.patronageReports;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -48,25 +47,20 @@ public class InventorPatronageReportConfirmService implements AbstractCreateServ
 		int patronageId;
 
 		result = new PatronageReport();
-
-		// Manage unique code
-		String ticker = "";
-
-		do
-			ticker = this.createTicker();
-		while (!this.isTickerUnique(ticker));
-		result.setSequenceNumber(ticker);
-
+		patronageId = request.getModel().getInteger("patronageId");
+		patronage = this.repository.findPatronageById(patronageId);
+		
+		final String patronageCode = patronage.getCode();
+		result.setSequenceNumber(patronageCode + " : " + this.createTicker());
+		
 		moment = new Date();
 		calendar = Calendar.getInstance();
 		calendar.setTime(moment);
 		calendar.add(Calendar.SECOND, -1);
 		moment = calendar.getTime();
 		result.setCreationMoment(moment);
-
-		patronageId = request.getModel().getInteger("patronageId");
-		patronage = this.repository.findPatronageById(patronageId);
-
+		
+		
 		result.setPatronage(patronage);
 
 		return result;
@@ -121,22 +115,22 @@ public class InventorPatronageReportConfirmService implements AbstractCreateServ
 
 	public String numbersSecuency() {
 
-		final char[] elementos = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+		final int num = this.repository.findAllPatronageReports().size()+1;
 
-		final char[] conjunto = new char[4];
-
-		final String secuency;
-
-		for (int i = 0; i < 4; i++) {
-			final int el = (int) (Math.random() * 9);
-			conjunto[i] = elementos[el];
+		String secuency = new String();
+		if(num>999) {
+			secuency = Integer.toString(num);
+		}else if(num>99) {
+			secuency="0"+Integer.toString(num);
+		}else if(num>9){
+			secuency="00"+Integer.toString(num);
+		}else {
+			secuency="000"+Integer.toString(num);
 		}
-
-		secuency = new String(conjunto);
+		
 		return secuency;
 
 	}
-
 	public String createTicker() {
 
 		// The ticker must be as follow:XXXX
@@ -149,25 +143,24 @@ public class InventorPatronageReportConfirmService implements AbstractCreateServ
 
 	}
 
-	public boolean isTickerUnique(final String ticker) {
-
-		Boolean result = true;
-
-		final ArrayList<PatronageReport> patronageReports = new ArrayList<>(this.repository.findAllPatronageReports());
-
-		final ArrayList<String> tickers = new ArrayList<>();
-
-		for (final PatronageReport t : patronageReports) {
-			tickers.add(t.getSequenceNumber());
-		}
-
-		if (tickers.contains(ticker)) {
-			result = false;
-			this.createTicker();
-		}
-
-		return result;
-
-	}
+//	public boolean isTickerUnique(final String ticker) {
+//
+//		Boolean result = true;
+//
+//		final ArrayList<PatronageReport> patronageReports = new ArrayList<>(this.repository.findAllPatronageReports());
+//
+//		final ArrayList<String> tickers = new ArrayList<>();
+//
+//		for (final PatronageReport t : patronageReports) {
+//			tickers.add(t.getSequenceNumber());
+//		}
+//
+//		if (tickers.contains(ticker)) {
+//			result = false;
+//			this.createTicker();
+//		}
+//
+//		return result;
+//	}
 
 }
