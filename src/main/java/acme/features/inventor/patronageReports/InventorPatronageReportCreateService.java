@@ -14,6 +14,7 @@ package acme.features.inventor.patronageReports;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -56,13 +57,29 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
 		Calendar calendar;
 		Patronage patronage;
 		int patronageId;
+		int patronageReportLastId = 0;
 
 		result = new PatronageReport();
+<<<<<<< HEAD
 		patronageId = request.getModel().getInteger("patronageId");
 		patronage = this.repository.findPatronageById(patronageId);
 		
 		final String patronageCode = patronage.getCode();
 		result.setSequenceNumber(patronageCode + " : " + this.createTicker());
+=======
+		
+		patronageReportLastId = this.repository.findLastPatronageReport().get(0) != null 
+				? this.repository.findLastPatronageReport().get(0).getId() 
+				: patronageReportLastId;
+
+		// Manage unique code
+		String ticker = "";
+
+		do
+			ticker = this.createTicker(patronageReportLastId+1);
+		while (!this.isTickerUnique(ticker,patronageReportLastId+1));
+		result.setSequenceNumber(ticker);
+>>>>>>> refs/remotes/origin/master
 		
 		moment = new Date();
 		calendar = Calendar.getInstance();
@@ -124,8 +141,9 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
 
 	// Other business methods -------------------------
 
-	public String numbersSecuency() {
+	public String createTicker(int patronageReportId) {
 
+<<<<<<< HEAD
 		final int num = this.repository.findAllPatronageReports().size()+1;
 
 		String secuency = new String();
@@ -137,8 +155,30 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
 			secuency="00"+Integer.toString(num);
 		}else {
 			secuency="000"+Integer.toString(num);
+=======
+		// The ticker must be as follow: X...:XXXX
+		String ticker = "";
+		String sequence = "";
+		List<PatronageReport> listPatronageReport = this.repository.findAllPatronageReports();
+		String auxSequence = Integer.toString(listPatronageReport.size()+1);
+		
+		switch(auxSequence.length()) {
+			case 1:
+				sequence = "000"+auxSequence;
+				break;
+			case 2:
+				sequence = "00"+auxSequence;
+				break;
+			case 3:
+				sequence = "0"+auxSequence;
+				break;
+			default:
+				sequence = auxSequence;
+				break;
+>>>>>>> refs/remotes/origin/master
 		}
 		
+<<<<<<< HEAD
 		return secuency;
 
 	}
@@ -148,13 +188,16 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
 		// The ticker must be as follow:XXXX
 		String ticker = new String();
 
+=======
+>>>>>>> refs/remotes/origin/master
 		// Set ticker format
-		ticker = this.numbersSecuency();
+		ticker = Integer.toString(patronageReportId)+ ":" + sequence;
 
 		return ticker;
 
 	}
 
+<<<<<<< HEAD
 //	public boolean isTickerUnique(final String ticker) {
 //
 //		Boolean result = true;
@@ -174,5 +217,27 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
 //
 //		return result;
 //	}
+=======
+	public boolean isTickerUnique(final String ticker,final int patronageReportId) {
+
+		Boolean result = true;
+
+		final ArrayList<PatronageReport> patronageReports = new ArrayList<>(this.repository.findAllPatronageReports());
+
+		final ArrayList<String> tickers = new ArrayList<>();
+
+		for (final PatronageReport t : patronageReports) {
+			tickers.add(t.getSequenceNumber());
+		}
+
+		if (tickers.contains(ticker)) {
+			result = false;
+			this.createTicker(patronageReportId);
+		}
+
+		return result;
+
+	}
+>>>>>>> refs/remotes/origin/master
 
 }

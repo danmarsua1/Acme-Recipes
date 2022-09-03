@@ -49,9 +49,8 @@ public class InventorPatronageListService implements AbstractListService<Invento
 		assert request != null;
 		
 		Collection<Patronage> result;
-		int inventorId = request.getPrincipal().getActiveRoleId();
 
-		result = this.repository.findManyPatronagesByInventor(inventorId);
+		result = this.repository.findAllPatronages();
 		
 		return result;
 	}

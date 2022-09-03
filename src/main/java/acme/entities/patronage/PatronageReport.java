@@ -4,6 +4,10 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+<<<<<<< HEAD
+=======
+import javax.persistence.OneToOne;
+>>>>>>> refs/remotes/origin/master
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -30,7 +34,12 @@ public class PatronageReport extends AbstractEntity {
 	
 	// Attributes -------------------------------------------------------------
 	
+<<<<<<< HEAD
 	@NotBlank
+=======
+	@Pattern(regexp = "^[0-9]{1,}\\:[0-9]{4}$")
+    @NotBlank
+>>>>>>> refs/remotes/origin/master
 	protected String sequenceNumber;
 
 	@Temporal(TemporalType.TIMESTAMP)
