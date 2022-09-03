@@ -1,5 +1,4 @@
 key,sequence-number,creation-moment,memorandum,link,key:patronage
-<<<<<<< HEAD
 patronage-report-01,0001,2020/01/01 10:00,The patronage was accepted,https://www.link1.com,patronage-01
 patronage-report-02,0002,2021/01/01 10:00,The patronage was denied,https://www.link2.com,patronage-02
 patronage-report-03,0002,2021/01/01 10:00,The patronage was accepted,https://www.link3.com,patronage-02
@@ -8,7 +7,3 @@ patronage-report-05,000,2021/01/01 10:00,The patronage was accepted,https://www.
 patronage-report-06,000,2021/01/01 10:00,The patronage was denied,https://www.link6.com,patronage-05
 patronage-report-07,000,2021/01/01 10:00,The patronage was accepted,https://www.link7.com,patronage-06
 patronage-report-08,000,2021/01/01 10:00,The patronage was denied,https://www.link8.com,patronage-07
-=======
-patronage-report-01,87:0001,2020/01/01 10:00,The patronage was accepted,https://www.link1.com,patronage-01
-patronage-report-02,88:0002,2021/01/01 10:00,The patronage was denied,https://www.link2.com,patronage-02
->>>>>>> refs/remotes/origin/master
