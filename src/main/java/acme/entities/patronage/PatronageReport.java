@@ -4,15 +4,12 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
-import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -33,8 +30,7 @@ public class PatronageReport extends AbstractEntity {
 	
 	// Attributes -------------------------------------------------------------
 	
-	@Pattern(regexp = "^[0-9]{1,}\\:[0-9]{4}$")
-    @NotBlank
+	@NotBlank
 	protected String sequenceNumber;
 
 	@Temporal(TemporalType.TIMESTAMP)
