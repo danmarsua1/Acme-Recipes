@@ -25,7 +25,6 @@ import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.entities.UserAccount;
 import acme.framework.roles.Any;
-import acme.framework.roles.UserRole;
 import acme.framework.services.AbstractListService;
 
 @Service
@@ -71,21 +70,10 @@ public class AnyUserAccountListService implements AbstractListService<Any, UserA
 		assert entity != null;
 		assert model != null;
 
-		final StringBuilder buffer;
-		Collection<UserRole> roles;
-
 		request.unbind(entity, model, "identity.name", "identity.surname");
 
-		roles = entity.getRoles();
-		final String roles2 = entity.getAuthorityString();
-//		buffer = new StringBuilder();
-//		for (final UserRole role : roles) {
-//			buffer.append(role.getAuthorityName());
-//			buffer.append(" ");
-//		}
-//
-//		model.setAttribute("roleList", buffer.toString());
-		model.setAttribute("roles2", roles2);
+		final String roleList= entity.getAuthorityString();
+		model.setAttribute("roleList", roleList);
 
 	}
 
