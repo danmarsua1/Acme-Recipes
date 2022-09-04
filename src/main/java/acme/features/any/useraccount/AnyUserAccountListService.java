@@ -52,7 +52,6 @@ public class AnyUserAccountListService implements AbstractListService<Any, UserA
 		Collection<UserAccount> result;
 
 		result = this.repository.findAllUserAccounts();
-		System.out.println(result);
 		final List<UserAccount> ls = new ArrayList<UserAccount>(result);
 		final Set<UserAccount> s = new LinkedHashSet<UserAccount>(ls);
 		for (final UserAccount userAccount : s) {
