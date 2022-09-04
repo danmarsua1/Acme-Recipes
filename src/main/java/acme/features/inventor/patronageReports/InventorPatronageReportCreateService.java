@@ -62,7 +62,7 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
 		patronage = this.repository.findPatronageById(patronageId);
 		
 		final String patronageCode = patronage.getCode();
-		result.setSequenceNumber(patronageCode + " : " + this.createTicker());
+		result.setSequenceNumber(patronageCode + ":" + this.createTicker());
 		
 		moment = new Date();
 		calendar = Calendar.getInstance();
