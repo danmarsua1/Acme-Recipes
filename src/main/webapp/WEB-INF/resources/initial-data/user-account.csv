@@ -5,6 +5,7 @@ user-account-patron1,true,"UserIdentity{name: 'Patron1', surname: 'One', email: 
 user-account-patron2,true,"UserIdentity{name: 'Patron2', surname: 'Two', email: 'patron2@acme.com'}",patron2,patron2
 user-account-patron3,true,"UserIdentity{name: 'Patron3', surname: 'Three', email: 'patron3@acme.com'}",patron3,patron3
 user-account-patron4,true,"UserIdentity{name: 'Patron4', surname: 'Four', email: 'patron4@acme.com'}",patron4,patron4
+user-account-patron5,true,"UserIdentity{name: 'Patron5', surname: 'Five', email: 'patron5@acme.com'}",patron5,patron5
 user-account-inventor1,true,"UserIdentity{name: 'Inventor1', surname: 'One', email: 'inventor1@acme.com'}",inventor1,inventor1
 user-account-inventor2,true,"UserIdentity{name: 'Inventor2', surname: 'Two', email: 'inventor2@acme.com'}",inventor2,inventor2
 user-account-inventor3,true,"UserIdentity{name: 'Inventor3', surname: 'Three', email: 'inventor3@acme.com'}",inventor3,inventor3
