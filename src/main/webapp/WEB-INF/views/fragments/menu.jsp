@@ -50,6 +50,8 @@
 				action="/administrator/administrator-dashboard/show" />
 			<acme:menu-suboption code="master.menu.administrator.configuration"
 				action="/administrator/configuration/show" />
+			<acme:menu-suboption code="master.menu.authenticated.bulletin" 
+				action="/authenticated/bulletin/list"/>
 			<acme:menu-separator />
 			<acme:menu-suboption
 				code="master.menu.administrator.populate-initial"
