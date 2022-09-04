@@ -22,7 +22,6 @@ import acme.framework.roles.Authenticated;
 import acme.roles.Consumer;
 
 @Controller
-//@RequestMapping("/authenticated/consumer/")
 public class AuthenticatedConsumerController extends AbstractController<Authenticated, Consumer> {
 
 	// Internal state ---------------------------------------------------------
