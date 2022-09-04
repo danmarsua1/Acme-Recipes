@@ -1,6 +1,7 @@
 package acme.forms.patron;
 
 import java.io.Serializable;
+import java.util.List;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -17,28 +18,28 @@ public class PatronDashboard implements Serializable {
 
 	Integer						totalNumberOfDeniedPatronages;
 
-	Double						averageBudgetOfProposedPatronages;
+	List<Object>						averageBudgetOfProposedPatronages;
 
-	Double						deviationBudgetOfProposedPatronages;
+	List<Object>						deviationBudgetOfProposedPatronages;
 
-	Double						minimumBudgetOfProposedPatronages;
+	List<Object>						minimumBudgetOfProposedPatronages;
 
-	Double						maximumBudgetOfProposedPatronages;
+	List<Object>						maximumBudgetOfProposedPatronages;
 
-	Double						averageBudgetOfAcceptedPatronages;
+	List<Object>						averageBudgetOfAcceptedPatronages;
 
-	Double						deviationBudgetOfAcceptedPatronages;
+	List<Object>						deviationBudgetOfAcceptedPatronages;
 
-	Double						minimumBudgetOfAcceptedPatronages;
+	List<Object>						minimumBudgetOfAcceptedPatronages;
 
-	Double						maximumBudgetOfAcceptedPatronages;
+	List<Object>						maximumBudgetOfAcceptedPatronages;
 
-	Double						averageBudgetOfDeniedPatronages;
+	List<Object>						averageBudgetOfDeniedPatronages;
 
-	Double						deviationBudgetOfDeniedPatronages;
+	List<Object>						deviationBudgetOfDeniedPatronages;
 
-	Double						minimumBudgetOfDeniedPatronages;
+	List<Object>						minimumBudgetOfDeniedPatronages;
 
-	Double						maximumBudgetOfDeniedPatronages;
+	List<Object>						maximumBudgetOfDeniedPatronages;
 
 }

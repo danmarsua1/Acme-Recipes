@@ -1,5 +1,7 @@
 package acme.features.patron.dashboard;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
@@ -19,42 +21,42 @@ public interface PatronDashboardRepository extends AbstractRepository {
 	Integer totalNumberOfDeniedPatronages();
 
 	// Manage PROPOSED
-	@Query("select avg(p.budget.amount) from Patronage p where p.status = 'PROPOSED' group by p.budget.currency")
-	Double averageBudgetOfProposedPatronages();
+		@Query("select avg(p.budget.amount), p.budget.currency from Patronage p where p.status = 'PROPOSED' group by p.budget.currency")
+		List<Object> averageBudgetOfProposedPatronages();
 
-	@Query("select stddev(p.budget.amount) from Patronage p where p.status = 'PROPOSED' group by p.budget.currency")
-	Double deviationBudgetOfProposedPatronages();
+		@Query("select stddev(p.budget.amount), p.budget.currency from Patronage p where p.status = 'PROPOSED' group by p.budget.currency")
+		List<Object> deviationBudgetOfProposedPatronages();
 
-	@Query("select min(p.budget.amount) from Patronage p where p.status = 'PROPOSED' group by p.budget.currency")
-	Double minimumBudgetOfProposedPatronages();
+		@Query("select min(p.budget.amount), p.budget.currency from Patronage p where p.status = 'PROPOSED' group by p.budget.currency")
+		List<Object> minimumBudgetOfProposedPatronages();
 
-	@Query("select max(p.budget.amount) from Patronage p where p.status = 'PROPOSED' group by p.budget.currency")
-	Double maximumBudgetOfProposedPatronages();
+		@Query("select max(p.budget.amount), p.budget.currency from Patronage p where p.status = 'PROPOSED' group by p.budget.currency")
+		List<Object> maximumBudgetOfProposedPatronages();
 
-	// Manage ACCEPTED
-	@Query("select avg(p.budget.amount) from Patronage p where p.status = 'ACCEPTED' group by p.budget.currency")
-	Double averageBudgetOfAcceptedPatronages();
+		// Manage ACCEPTED
+		@Query("select avg(p.budget.amount), p.budget.currency from Patronage p where p.status = 'ACCEPTED' group by p.budget.currency")
+		List<Object> averageBudgetOfAcceptedPatronages();
 
-	@Query("select stddev(p.budget.amount) from Patronage p where p.status = 'ACCEPTED' group by p.budget.currency")
-	Double deviationBudgetOfAcceptedPatronages();
+		@Query("select stddev(p.budget.amount), p.budget.currency from Patronage p where p.status = 'ACCEPTED' group by p.budget.currency")
+		List<Object> deviationBudgetOfAcceptedPatronages();
 
-	@Query("select min(p.budget.amount) from Patronage p where p.status = 'ACCEPTED' group by p.budget.currency")
-	Double minimumBudgetOfAcceptedPatronages();
+		@Query("select min(p.budget.amount), p.budget.currency from Patronage p where p.status = 'ACCEPTED' group by p.budget.currency")
+		List<Object> minimumBudgetOfAcceptedPatronages();
 
-	@Query("select max(p.budget.amount) from Patronage p where p.status = 'ACCEPTED' group by p.budget.currency")
-	Double maximumBudgetOfAcceptedPatronages();
+		@Query("select max(p.budget.amount), p.budget.currency from Patronage p where p.status = 'ACCEPTED' group by p.budget.currency")
+		List<Object> maximumBudgetOfAcceptedPatronages();
 
-	// Manage DENIED
-	@Query("select avg(p.budget.amount) from Patronage p where p.status = 'DENIED' group by p.budget.currency")
-	Double averageBudgetOfDeniedPatronages();
+		// Manage DENIED
+		@Query("select avg(p.budget.amount), p.budget.currency from Patronage p where p.status = 'DENIED' group by p.budget.currency")
+		List<Object> averageBudgetOfDeniedPatronages();
 
-	@Query("select stddev(p.budget.amount) from Patronage p where p.status = 'DENIED' group by p.budget.currency")
-	Double deviationBudgetOfDeniedPatronages();
+		@Query("select stddev(p.budget.amount), p.budget.currency from Patronage p where p.status = 'DENIED' group by p.budget.currency")
+		List<Object> deviationBudgetOfDeniedPatronages();
 
-	@Query("select min(p.budget.amount) from Patronage p where p.status = 'DENIED' group by p.budget.currency")
-	Double minimumBudgetOfDeniedPatronages();
+		@Query("select min(p.budget.amount), p.budget.currency from Patronage p where p.status = 'DENIED' group by p.budget.currency")
+		List<Object> minimumBudgetOfDeniedPatronages();
 
-	@Query("select max(p.budget.amount) from Patronage p where p.status = 'DENIED' group by p.budget.currency")
-	Double maximumBudgetOfDeniedPatronages();
+		@Query("select max(p.budget.amount), p.budget.currency from Patronage p where p.status = 'DENIED' group by p.budget.currency")
+		List<Object> maximumBudgetOfDeniedPatronages();
 	
 }

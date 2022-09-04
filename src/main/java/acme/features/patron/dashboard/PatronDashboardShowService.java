@@ -1,5 +1,7 @@
 package acme.features.patron.dashboard;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,33 +29,42 @@ public class PatronDashboardShowService implements AbstractShowService<Patron,Pa
 			
 			PatronDashboard result;
 			
+			// Manage TOTALS
 			Integer	totalNumberOfProposedPatronages;
 			Integer	totalNumberOfAcceptedPatronages;
 			Integer	totalNumberOfDeniedPatronages;
-			Double averageBudgetOfProposedPatronages;
-			Double deviationBudgetOfProposedPatronages;
-			Double minimumBudgetOfProposedPatronages;
-			Double maximumBudgetOfProposedPatronages;
-			Double averageBudgetOfAcceptedPatronages;
-			Double deviationBudgetOfAcceptedPatronages;
-			Double minimumBudgetOfAcceptedPatronages;
-			Double maximumBudgetOfAcceptedPatronages;
-			Double averageBudgetOfDeniedPatronages;
-			Double deviationBudgetOfDeniedPatronages;
-			Double minimumBudgetOfDeniedPatronages;
-			Double maximumBudgetOfDeniedPatronages;
+			
+			// Manage PROPOSED
+			List<Object> averageBudgetOfProposedPatronages;
+			List<Object> deviationBudgetOfProposedPatronages;
+			List<Object> minimumBudgetOfProposedPatronages;
+			List<Object> maximumBudgetOfProposedPatronages;
+			
+			// Manage ACCEPTED
+			List<Object> averageBudgetOfAcceptedPatronages;
+			List<Object> deviationBudgetOfAcceptedPatronages;
+			List<Object> minimumBudgetOfAcceptedPatronages;
+			List<Object> maximumBudgetOfAcceptedPatronages;
+			
+			// Manage DENIED
+			List<Object> averageBudgetOfDeniedPatronages;
+			List<Object> deviationBudgetOfDeniedPatronages;
+			List<Object> minimumBudgetOfDeniedPatronages;
+			List<Object> maximumBudgetOfDeniedPatronages;
 			
 			totalNumberOfProposedPatronages = this.repository.totalNumberOfProposedPatronages();
-			totalNumberOfAcceptedPatronages = this.repository.totalNumberOfAcceptedPatronages();
-			totalNumberOfDeniedPatronages = this.repository.totalNumberOfDeniedPatronages();
 			averageBudgetOfProposedPatronages = this.repository.averageBudgetOfProposedPatronages();
 			deviationBudgetOfProposedPatronages = this.repository.deviationBudgetOfProposedPatronages();
 			minimumBudgetOfProposedPatronages = this.repository.minimumBudgetOfProposedPatronages();
 			maximumBudgetOfProposedPatronages = this.repository.maximumBudgetOfProposedPatronages();
+			
+			totalNumberOfAcceptedPatronages = this.repository.totalNumberOfAcceptedPatronages();
 			averageBudgetOfAcceptedPatronages = this.repository.averageBudgetOfAcceptedPatronages();
 			deviationBudgetOfAcceptedPatronages = this.repository.deviationBudgetOfAcceptedPatronages();
 			minimumBudgetOfAcceptedPatronages = this.repository.minimumBudgetOfAcceptedPatronages();
 			maximumBudgetOfAcceptedPatronages = this.repository.maximumBudgetOfAcceptedPatronages();
+			
+			totalNumberOfDeniedPatronages = this.repository.totalNumberOfDeniedPatronages();
 			averageBudgetOfDeniedPatronages = this.repository.averageBudgetOfDeniedPatronages();
 			deviationBudgetOfDeniedPatronages = this.repository.deviationBudgetOfDeniedPatronages();
 			minimumBudgetOfDeniedPatronages = this.repository.minimumBudgetOfDeniedPatronages();
@@ -61,16 +72,18 @@ public class PatronDashboardShowService implements AbstractShowService<Patron,Pa
 			
 			result = new PatronDashboard();
 			result.setTotalNumberOfProposedPatronages(totalNumberOfProposedPatronages);
-			result.setTotalNumberOfAcceptedPatronages(totalNumberOfAcceptedPatronages);
-			result.setTotalNumberOfDeniedPatronages(totalNumberOfDeniedPatronages);
 			result.setAverageBudgetOfProposedPatronages(averageBudgetOfProposedPatronages);
 			result.setDeviationBudgetOfProposedPatronages(deviationBudgetOfProposedPatronages);
 			result.setMinimumBudgetOfProposedPatronages(minimumBudgetOfProposedPatronages);
 			result.setMaximumBudgetOfProposedPatronages(maximumBudgetOfProposedPatronages);
+			
+			result.setTotalNumberOfAcceptedPatronages(totalNumberOfAcceptedPatronages);
 			result.setAverageBudgetOfAcceptedPatronages(averageBudgetOfAcceptedPatronages);
 			result.setDeviationBudgetOfAcceptedPatronages(deviationBudgetOfAcceptedPatronages);
 			result.setMinimumBudgetOfAcceptedPatronages(minimumBudgetOfAcceptedPatronages);
 			result.setMaximumBudgetOfAcceptedPatronages(maximumBudgetOfAcceptedPatronages);
+			
+			result.setTotalNumberOfDeniedPatronages(totalNumberOfDeniedPatronages);
 			result.setAverageBudgetOfDeniedPatronages(averageBudgetOfDeniedPatronages);
 			result.setDeviationBudgetOfDeniedPatronages(deviationBudgetOfDeniedPatronages);
 			result.setMinimumBudgetOfDeniedPatronages(minimumBudgetOfDeniedPatronages);
