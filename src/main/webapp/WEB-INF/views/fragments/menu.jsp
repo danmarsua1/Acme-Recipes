@@ -48,6 +48,8 @@
 			access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.dashboard"
 				action="/administrator/administrator-dashboard/show" />
+			<acme:menu-suboption code="master.menu.authenticated.bulletin" 
+				action="/authenticated/bulletin/list"/>
 			<acme:menu-suboption code="master.menu.administrator.configuration"
 				action="/administrator/configuration/show" />
 			<acme:menu-separator />
