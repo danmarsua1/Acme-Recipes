@@ -12,7 +12,11 @@
 
 package acme.features.any.useraccount;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -49,12 +53,16 @@ public class AnyUserAccountListService implements AbstractListService<Any, UserA
 		Collection<UserAccount> result;
 
 		result = this.repository.findAllUserAccounts();
-		for (final UserAccount userAccount : result) {
-			userAccount.getRoles().forEach(r -> {
+		System.out.println(result);
+		final List<UserAccount> ls = new ArrayList<UserAccount>(result);
+		final Set<UserAccount> s = new LinkedHashSet<UserAccount>(ls);
+		for (final UserAccount userAccount : s) {
+			userAccount.getRoles().forEach(r -> { ;
+				
 			});
 		}
 
-		return result;
+		return s;
 	}
 	
 	@Override
@@ -63,19 +71,21 @@ public class AnyUserAccountListService implements AbstractListService<Any, UserA
 		assert entity != null;
 		assert model != null;
 
-		StringBuilder buffer;
+		final StringBuilder buffer;
 		Collection<UserRole> roles;
 
 		request.unbind(entity, model, "identity.name", "identity.surname");
 
 		roles = entity.getRoles();
-		buffer = new StringBuilder();
-		for (final UserRole role : roles) {
-			buffer.append(role.getAuthorityName());
-			buffer.append(" ");
-		}
-
-		model.setAttribute("roleList", buffer.toString());
+		final String roles2 = entity.getAuthorityString();
+//		buffer = new StringBuilder();
+//		for (final UserRole role : roles) {
+//			buffer.append(role.getAuthorityName());
+//			buffer.append(" ");
+//		}
+//
+//		model.setAttribute("roleList", buffer.toString());
+		model.setAttribute("roles2", roles2);
 
 	}
 

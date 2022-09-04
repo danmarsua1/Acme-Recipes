@@ -1,4 +1,4 @@
-package acme.forms.administrator;
+package acme.features.administrator.dashboard;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package acme.features.authenticated;
+package acme.features.administrator.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -6,13 +6,13 @@ import org.springframework.stereotype.Service;
 import acme.entities.Configuration;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
-import acme.framework.roles.Authenticated;
+import acme.framework.roles.Administrator;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuthenticatedConfigurationShowService implements AbstractShowService<Authenticated,Configuration>{
+public class AdministratorConfigurationShowService implements AbstractShowService<Administrator,Configuration>{
 	@Autowired
-	protected AuthenticatedConfigurationRepository repository;
+	protected AdministratorConfigurationRepository repository;
 	
 	@Override
 	public boolean authorise(final Request<Configuration>request) {
@@ -23,10 +23,14 @@ public class AuthenticatedConfigurationShowService implements AbstractShowServic
 	@Override
 	public Configuration findOne(final Request<Configuration>request) {
 		assert request != null;
+		
 
 		Configuration result;
 		
+		
+		
 		result = this.repository.findConfiguration();
+		
 		
 		return result;
 	}
@@ -38,7 +42,7 @@ public class AuthenticatedConfigurationShowService implements AbstractShowServic
 		assert model != null;
 		
 		
-		request.unbind(entity, model,"currency","acceptedCurrencies");
+		request.unbind(entity, model,"currency","acceptedCurrencies","strongSpam","strongSpamThreshold","weakSpam","weakSpamThreshold");
 		
 	}
 }
