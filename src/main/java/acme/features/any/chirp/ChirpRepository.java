@@ -26,7 +26,7 @@ public interface ChirpRepository extends AbstractRepository {
 	@Query("select c from Chirp c where c.id = :id")
 	Chirp findOneChirpById(int id);
 	
-	@Query("select c from Chirp c where TO_DAYS(current_date()) - TO_DAYS(c.creationMoment) < 730")
+	@Query("select c from Chirp c where TO_DAYS(current_date()) - TO_DAYS(c.creationMoment) < 30")
 	Collection<Chirp> findAllChirps();
 	
 }
