@@ -27,9 +27,6 @@ public class Quantity extends AbstractEntity {
 	@Min(1)
 	private Integer quantity;
 	
-	
-	
-
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
@@ -44,4 +41,8 @@ public class Quantity extends AbstractEntity {
 	@ManyToOne(optional=false)
 	protected Item item;
 	
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	protected Recipe recipe;
 }
