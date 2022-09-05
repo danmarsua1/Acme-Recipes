@@ -21,6 +21,4 @@
 	<acme:input-textarea code="authenticated.bulletin.form.label.text" path="text"/>
 	<acme:input-textbox code="authenticated.bulletin.form.label.flag" path="flag"/>
 	<acme:input-textbox code="authenticated.bulletin.form.label.link" path="link"/>
-	
-	
 </acme:form>

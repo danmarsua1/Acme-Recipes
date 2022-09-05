@@ -13,7 +13,7 @@ administrator.bulletin.form.label.heading = Heading:
 administrator.bulletin.form.label.flag = Flag:
 administrator.bulletin.form.label.text = Text:
 administrator.bulletin.form.label.link = Link:
-administrator.bulletin.form.label.confirmation = Bulletins cannot be updated or deleted, confirm that the chirp is correct
+administrator.bulletin.form.label.confirmation = Bulletins cannot be updated or deleted, confirm that is correct
 
 
 administrator.bulletin.list.label.instantiation-moment = Instantiation moment

@@ -1,2 +1,4 @@
 recordIndex,instantiationMoment,heading,text,flag,link
-0,2021/01/01 10:00,Title2,Beware of white shadows!,false,https://www.bulletin.com
+0,2022/08/23 10:00,Title2,Beware of white shadows!,true,https://www.bulletin.com
+1,2021/01/01 10:00,Title3,Beware of dark shadows!,false,https://www.bulletin.com
+2,2022/08/25 10:00,Title4,Beware of grey shadows!,true,https://www.bulletin.com
