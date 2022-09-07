@@ -38,7 +38,11 @@ public class AdministratorConfigurationUpdateTest extends TestHarness{
 		super.clickOnMenu("Administrator", "Configuration");
 		super.clickOnButton("Update");
 		super.fillInputBoxIn("currency", currency);
+		super.fillInputBoxIn("acceptedCurrencies", acceptedCurrencies);
 		super.fillInputBoxIn("strongSpam", strongSpam);
+		super.fillInputBoxIn("strongSpamThreshold", strongSpamThreshold.toString());
+		super.fillInputBoxIn("weakSpam", weakSpam);
+		super.fillInputBoxIn("weakSpamThreshold", weakSpamThreshold.toString());
 		super.clickOnSubmit("Update");
 		
 		

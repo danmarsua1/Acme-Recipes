@@ -47,5 +47,9 @@ public class Toolkit extends AbstractEntity {
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
-
+	
+//	@Valid
+//	@NotNull
+//	@ManyToOne(optional = false)
+//	protected Inventor inventor;
 }

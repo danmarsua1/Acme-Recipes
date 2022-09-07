@@ -23,7 +23,7 @@ public class Configuration extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@NotBlank
-	@Pattern(regexp = "^[A-Z]{3}$")
+	@Pattern(regexp = "^(EUR|GBP|USD)$")
 	protected String				currency;
 	
 	@NotBlank
