@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="13.2">
+<diagram program="umlet" version="14.3.0">
   <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
@@ -1012,20 +1012,5 @@ m2=0..*
 send ^
 </panel_attributes>
     <additional_attributes>380.0;10.0;380.0;230.0;10.0;230.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1912</x>
-      <y>176</y>
-      <w>216</w>
-      <h>400</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-x
-m1=1
-m2=0..*
-
-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;470.0;250.0;470.0</additional_attributes>
   </element>
 </diagram>

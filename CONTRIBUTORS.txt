@@ -10,7 +10,6 @@
 
 - Rafael Corchuelo (corchu@us.es)
 - Bogdan Marian Stefan (bogste@alum.us.es)
-- Regina Escalera Martin(regescmar1@alum.us.es)
 - Ernesto Gutiérrez Contreras (erngutcon@alum.us.es)
 - Luis Cerrato Sánchez (luicersan@us.es)
 - Daniel Jesús Martínez Suárez (danmarsua1@alum.us.es)

@@ -39,9 +39,5 @@ public class Quantity extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional=false)
 	protected Item item;
-	
-//	@NotNull
-//	@Valid
-//	@ManyToOne(optional = false)
-//	protected Recipe recipe;
+
 }

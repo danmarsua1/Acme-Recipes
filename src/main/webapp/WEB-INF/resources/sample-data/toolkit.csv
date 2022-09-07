@@ -1,10 +1,10 @@
-key,code,title,description,assembly-notes,publish,link,key:inventor
-toolkit-01,AAA-111-A,Toolkit,The Good School Toolkit,Notes,true,https://www.toolkit1.com,inventor-01
-toolkit-02,BBB-111-B,Toolkit,The Bad School Toolkit,Notes,false,https://www.toolkit2.com,inventor-01
-toolkit-03,CCC-111-C,Toolkit,The Regular School Toolkit,Notes,true,https://www.toolkit3.com,inventor-01
-toolkit-04,DDD-111-D,Toolkit,The Good School Toolkit,Notes,false,https://www.toolkit4.com,inventor-02
-toolkit-05,EEE-111-E,Toolkit,The Bad School Toolkit,Notes,true,https://www.toolkit5.com,inventor-02
-toolkit-06,FFF-111-F,Toolkit,The Regular School Toolkit,Notes,false,https://www.toolkit6.com,inventor-02
-toolkit-07,GGG-111-G,Toolkit,The Good School Toolkit,Notes,true,https://www.toolkit7.com,inventor-02
-toolkit-08,HHH-111-H,Toolkit,The Regular School Toolkit,Notes,true,https://www.toolkit8.com,inventor-02
-toolkit-09,III-111-I,Toolkit,The Bad School Toolkit,Notes,false,https://www.toolkit9.com,inventor-03
+key,code,title,description,assembly-notes,publish,link
+toolkit-01,AAA-111-A,Toolkit,The Good School Toolkit,Notes,true,https://www.toolkit1.com
+toolkit-02,BBB-111-B,Toolkit,The Bad School Toolkit,Notes,false,https://www.toolkit2.com
+toolkit-03,CCC-111-C,Toolkit,The Regular School Toolkit,Notes,true,https://www.toolkit3.com
+toolkit-04,DDD-111-D,Toolkit,The Good School Toolkit,Notes,false,https://www.toolkit4.com
+toolkit-05,EEE-111-E,Toolkit,The Bad School Toolkit,Notes,true,https://www.toolkit5.com
+toolkit-06,FFF-111-F,Toolkit,The Regular School Toolkit,Notes,false,https://www.toolkit6.com
+toolkit-07,GGG-111-G,Toolkit,The Good School Toolkit,Notes,true,https://www.toolkit7.com
+toolkit-08,HHH-111-H,Toolkit,The Regular School Toolkit,Notes,true,https://www.toolkit8.com
+toolkit-09,III-111-I,Toolkit,The Bad School Toolkit,Notes,false,https://www.toolkit9.com
