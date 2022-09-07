@@ -101,7 +101,7 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 			boolean accepted = false;
 			
 			// Manage likely currencies
-			for (final String acceptedCurrency : this.repository.findConfiguration().getAcceptedCurrencies().toUpperCase().split("[.]")) {
+			for (final String acceptedCurrency : this.repository.findConfiguration().getAcceptedCurrencies().toUpperCase().split(",")) {
 				if (upperCaseCurrency.equals(acceptedCurrency)) {
 					accepted = true;
 					break;
