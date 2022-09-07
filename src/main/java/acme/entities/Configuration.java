@@ -23,22 +23,22 @@ public class Configuration extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@NotBlank
-	@Pattern(regexp = "^(EUR|GBP|USD)$")
+	@Pattern(regexp = "^[A-Z]{3}$")
 	protected String				currency;
 	
 	@NotBlank
-	@Pattern(regexp = "^$|(^[^\\.]+([\\.][^\\.]+)*$)")
+	@Pattern(regexp = "^$|(^[^\\,]+([\\,][^\\,]+)*$)")
 	protected String				acceptedCurrencies;
 
 	@NotBlank
-	@Pattern(regexp = "^$|(^[^\\.]+([\\.][^\\.]+)*$)")
+	@Pattern(regexp = "^$|(^[^\\,]+([\\,][^\\,]+)*$)")
 	private String					strongSpam;
 	
 	@Range(min = 0, max = 100)
 	private Double					strongSpamThreshold;
 	
 	@NotBlank
-	@Pattern(regexp = "^$|(^[^\\.]+([\\.][^\\.]+)*$)")
+	@Pattern(regexp = "^$|(^[^\\,]+([\\,][^\\,]+)*$)")
 	private String					weakSpam;
 	
 	@Range(min = 0, max = 100)
@@ -51,7 +51,7 @@ public class Configuration extends AbstractEntity {
 		boolean accepted = false;
 		
 		// Manage likely currencies
-		for (final String acceptedCurrency : this.acceptedCurrencies.toUpperCase().split(".")) {
+		for (final String acceptedCurrency : this.acceptedCurrencies.toUpperCase().split(",")) {
 			if (upperCaseCurrency.equals(acceptedCurrency)) {
 				accepted = true;
 				break;
@@ -68,13 +68,13 @@ public class Configuration extends AbstractEntity {
 		int weakSpamCount = 0;
 		
 		// Manage likely strong spam words
-		for (final String spamWord : this.strongSpam.toLowerCase().split(".")) {
+		for (final String spamWord : this.strongSpam.toLowerCase().split(",")) {
 			strongSpamCount += StringUtils.countMatches(lowerCaseText, spamWord) * spamWord.length();
 		}
 		final double strongPercentageResult = strongSpamCount / text.length() * 100;
 		
 		// Manage likely weak spam words
-		for (final String spamWord : this.strongSpam.toLowerCase().split(".")) {
+		for (final String spamWord : this.strongSpam.toLowerCase().split(",")) {
 			weakSpamCount += StringUtils.countMatches(lowerCaseText, spamWord) * spamWord.length();
 		}
 		final double weakPercentageResult = weakSpamCount / text.length() * 100;
