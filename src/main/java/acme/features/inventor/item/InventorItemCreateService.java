@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.checker.SpamChecker;
-import acme.entities.Configuration;
 import acme.entities.Item;
+import acme.entities.ItemType;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Inventor;
 
@@ -19,9 +19,6 @@ public class InventorItemCreateService implements AbstractCreateService<Inventor
 	
 	@Autowired
 	protected InventorItemRepository repository;
-	
-	@Autowired
-	protected SpamChecker checker;
 	
 	@Override
 	public boolean authorise(final Request<Item> request) {
@@ -79,19 +76,7 @@ public class InventorItemCreateService implements AbstractCreateService<Inventor
 	public void validate(final Request<Item> request, final Item entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
-		assert errors != null;	
-		
-		if(!errors.hasErrors("name")) {
-			final Configuration sc = this.repository.findConfiguration();
-			final boolean spamFree = this.checker.isSpam(entity.getName(), sc.getStrongSpam(),sc.getWeakSpam(),sc.getStrongSpamThreshold(),sc.getWeakSpamThreshold());
-			errors.state(request, spamFree, "name", "form.error.spam");
-		}
-
-		if(!errors.hasErrors("description")) {
-			final Configuration sc = this.repository.findConfiguration();
-			final boolean spamFree = this.checker.isSpam(entity.getDescription(), sc.getStrongSpam(),sc.getWeakSpam(),sc.getStrongSpamThreshold(),sc.getWeakSpamThreshold());
-			errors.state(request, spamFree, "description", "form.error.spam");
-		}
+		assert errors != null;			
 	}
 			
 	@Override
@@ -145,10 +130,10 @@ public class InventorItemCreateService implements AbstractCreateService<Inventor
 
 		}
 
-		public String generateLetter(final String secuency) {
+		public String generateLetter(String secuency) {
 
 			final int rd = (int) (Math.random() * 2);
-			final String letter = String.valueOf(secuency.charAt(rd)).toUpperCase();
+			String letter = String.valueOf(secuency.charAt(rd)).toUpperCase();
 
 			return letter;
 
@@ -158,7 +143,7 @@ public class InventorItemCreateService implements AbstractCreateService<Inventor
 
 			// The ticker must be as follow: AAA-XXX-A
 			String code = new String();
-			final String lettersSecuency = this.lettersSecuency();
+			String lettersSecuency = this.lettersSecuency();
 
 			// Set ticker format
 			code = this.lettersSecuency() + "-" + this.numbersSecuency() + "-" + this.generateLetter(lettersSecuency);

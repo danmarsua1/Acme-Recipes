@@ -18,9 +18,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.checker.SpamChecker;
 import acme.entities.Bulletin;
-import acme.entities.Configuration;
 import acme.features.authenticated.bulletin.AuthenticatedBulletinRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -35,9 +33,6 @@ public class AdministratorBulletinCreateService implements AbstractCreateService
 
 	@Autowired
 	protected AuthenticatedBulletinRepository repository;
-	
-	@Autowired
-	protected SpamChecker checker;
 
 	// AbstractCreateService<Administrator, Announcement> interface --------------
 
@@ -79,17 +74,6 @@ public class AdministratorBulletinCreateService implements AbstractCreateService
 		assert entity != null;
 		assert errors != null;
 		
-		if(!errors.hasErrors("heading")) {
-			final Configuration sc = this.repository.findConfiguration();
-			final boolean spamFree = this.checker.isSpam(entity.getHeading(), sc.getStrongSpam(),sc.getWeakSpam(),sc.getStrongSpamThreshold(),sc.getWeakSpamThreshold());
-			errors.state(request, spamFree, "heading", "form.error.spam");
-		}
-
-		if(!errors.hasErrors("text")) {
-			final Configuration sc = this.repository.findConfiguration();
-			final boolean spamFree = this.checker.isSpam(entity.getText(), sc.getStrongSpam(),sc.getWeakSpam(),sc.getStrongSpamThreshold(),sc.getWeakSpamThreshold());
-			errors.state(request, spamFree, "text", "form.error.spam");
-		}
 		boolean confirmation;
 		
 		confirmation = request.getModel().getBoolean("confirmation");

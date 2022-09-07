@@ -17,8 +17,6 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.checker.SpamChecker;
-import acme.entities.Configuration;
 import acme.entities.Item;
 import acme.entities.ItemType;
 import acme.entities.Quantity;
@@ -44,9 +42,6 @@ public class InventorToolkitCreateService implements AbstractCreateService<Inven
 	protected InventorItemRepository itemRepository;
 	@Autowired
 	protected InventorQuantityRepository quantityRepository;
-	
-	@Autowired
-	protected SpamChecker checker;
 
 	// AbstractCreateService<Inventor, Toolkit> interface -------------------------
 
@@ -96,24 +91,6 @@ public class InventorToolkitCreateService implements AbstractCreateService<Inven
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
-		if(!errors.hasErrors("title")) {
-			final Configuration sc = this.repository.findConfiguration();
-			final boolean spamFree = this.checker.isSpam(entity.getTitle(), sc.getStrongSpam(),sc.getWeakSpam(),sc.getStrongSpamThreshold(),sc.getWeakSpamThreshold());
-			errors.state(request, spamFree, "title", "form.error.spam");
-		}
-
-		if(!errors.hasErrors("description")) {
-			final Configuration sc = this.repository.findConfiguration();
-			final boolean spamFree = this.checker.isSpam(entity.getDescription(), sc.getStrongSpam(),sc.getWeakSpam(),sc.getStrongSpamThreshold(),sc.getWeakSpamThreshold());
-			errors.state(request, spamFree, "description", "form.error.spam");
-		}
-		
-		if(!errors.hasErrors("assemblyNotes")) {
-			final Configuration sc = this.repository.findConfiguration();
-			final boolean spamFree = this.checker.isSpam(entity.getAssemblyNotes(), sc.getStrongSpam(),sc.getWeakSpam(),sc.getStrongSpamThreshold(),sc.getWeakSpamThreshold());
-			errors.state(request, spamFree, "assemblyNotes", "form.error.spam");
-		}
 	}
 
 	@Override
@@ -133,7 +110,7 @@ public class InventorToolkitCreateService implements AbstractCreateService<Inven
 		this.repository.save(entity);
 		
 		// Default item
-		final Item item = new Item();
+		Item item = new Item();
 		String itemTicker = "";
 
 		do
@@ -146,19 +123,19 @@ public class InventorToolkitCreateService implements AbstractCreateService<Inven
 		item.setType(ItemType.TOOL);
 		item.setTechnology("test");
 
-		final Money money = new Money();
+		Money money = new Money();
 		money.setAmount(0.0);
 		money.setCurrency("EUR");
 		item.setRetailPrice(money);
 
 		final int inventorId = request.getPrincipal().getAccountId();
-		final Inventor inventor = this.repository.findOneInventorById(inventorId);
+		Inventor inventor = this.repository.findOneInventorById(inventorId);
 		item.setInventor(inventor);
 		
 		this.itemRepository.save(item);
 
 		// Quantity
-		final Quantity q = new Quantity();
+		Quantity q = new Quantity();
 		q.setItem(item);
 		q.setToolkit(entity);
 		q.setQuantity(1);
@@ -206,10 +183,10 @@ public class InventorToolkitCreateService implements AbstractCreateService<Inven
 
 	}
 
-	public String generateLetter(final String secuency) {
+	public String generateLetter(String secuency) {
 
 		final int rd = (int) (Math.random() * 2);
-		final String letter = String.valueOf(secuency.charAt(rd)).toUpperCase();
+		String letter = String.valueOf(secuency.charAt(rd)).toUpperCase();
 
 		return letter;
 
@@ -219,7 +196,7 @@ public class InventorToolkitCreateService implements AbstractCreateService<Inven
 
 		// The ticker must be as follow: AAA-XXX-A
 		String ticker = new String();
-		final String lettersSecuency = this.lettersSecuency();
+		String lettersSecuency = this.lettersSecuency();
 
 		// Set ticker format
 		ticker = this.lettersSecuency() + "-" + this.numbersSecuency() + "-" + this.generateLetter(lettersSecuency);

@@ -4,7 +4,6 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import acme.entities.Configuration;
 import acme.entities.Item;
 import acme.entities.ItemType;
 import acme.entities.Quantity;
@@ -41,7 +40,4 @@ public interface InventorItemRepository extends AbstractRepository {
 	
 	@Query("select distinct q from Item i, Quantity q where i.id = q.item.id and i.id = :id")
 	Collection<Quantity> findAllQuantitiesByItem(int id);
-	
-	@Query("select c from Configuration c")
-	Configuration findConfiguration();
 }

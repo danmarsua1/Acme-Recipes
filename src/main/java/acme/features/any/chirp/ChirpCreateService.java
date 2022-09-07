@@ -17,9 +17,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.checker.SpamChecker;
 import acme.entities.Chirp;
-import acme.entities.Configuration;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -33,9 +31,6 @@ public class ChirpCreateService implements AbstractCreateService<Any, Chirp> {
 
 	@Autowired
 	protected ChirpRepository repository;
-	
-	@Autowired
-	protected SpamChecker checker;
 
 	// AbstractCreateService<Administrator, Chirp> interface --------------
 
@@ -76,18 +71,6 @@ public class ChirpCreateService implements AbstractCreateService<Any, Chirp> {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
-		if(!errors.hasErrors("title")) {
-			final Configuration sc = this.repository.findConfiguration();
-			final boolean spamFree = this.checker.isSpam(entity.getTitle(), sc.getStrongSpam(),sc.getWeakSpam(),sc.getStrongSpamThreshold(),sc.getWeakSpamThreshold());
-			errors.state(request, spamFree, "title", "form.error.spam");
-		}
-
-		if(!errors.hasErrors("body")) {
-			final Configuration sc = this.repository.findConfiguration();
-			final boolean spamFree = this.checker.isSpam(entity.getBody(), sc.getStrongSpam(),sc.getWeakSpam(),sc.getStrongSpamThreshold(),sc.getWeakSpamThreshold());
-			errors.state(request, spamFree, "body", "form.error.spam");
-		}
 		
 		boolean confirmation;
 		
