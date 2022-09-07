@@ -18,6 +18,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.Chirp;
+import acme.entities.Configuration;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
@@ -28,5 +29,9 @@ public interface ChirpRepository extends AbstractRepository {
 	
 	@Query("select c from Chirp c where TO_DAYS(current_date()) - TO_DAYS(c.creationMoment) < 30")
 	Collection<Chirp> findAllChirps();
+	
+	@Query("select c from Configuration c")
+	Configuration findConfiguration();
+	
 	
 }

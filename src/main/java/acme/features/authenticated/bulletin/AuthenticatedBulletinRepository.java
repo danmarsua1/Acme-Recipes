@@ -18,6 +18,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.Bulletin;
+import acme.entities.Configuration;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
@@ -28,5 +29,8 @@ public interface AuthenticatedBulletinRepository extends AbstractRepository {
 	
 	@Query("select a from Bulletin a where TO_DAYS(current_date()) - TO_DAYS(a.instantiationMoment) < 730")
 	Collection<Bulletin> findAllBulletins();
+	
+	@Query("select c from Configuration c")
+	Configuration findConfiguration();
 	
 }

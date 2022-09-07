@@ -8,8 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-This is a Acme-Recipes project for september evaluation. This project is a Acme information system 
-project.
+This is a Acme-Recipes final project (D05) for september retake of Design & Testing II.
 
 To get this project up and running, please follow the appropriate guideline, taking into 
 account that you must link Acme-Framework-22.7 excluding the following resources:
