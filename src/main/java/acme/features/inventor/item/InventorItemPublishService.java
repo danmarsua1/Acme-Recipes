@@ -3,6 +3,8 @@ package acme.features.inventor.item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.checker.SpamChecker;
+import acme.entities.Configuration;
 import acme.entities.Item;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -15,6 +17,9 @@ public class InventorItemPublishService implements AbstractUpdateService<Invento
 
 	@Autowired
 	protected  InventorItemRepository repository;
+	
+	@Autowired
+	protected SpamChecker checker;
 	
 	@Override
 	public boolean authorise(final Request<Item> request) {
@@ -67,6 +72,18 @@ public class InventorItemPublishService implements AbstractUpdateService<Invento
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		if(!errors.hasErrors("name")) {
+			final Configuration sc = this.repository.findConfiguration();
+			final boolean spamFree = this.checker.isSpam(entity.getName(), sc.getStrongSpam(),sc.getWeakSpam(),sc.getStrongSpamThreshold(),sc.getWeakSpamThreshold());
+			errors.state(request, spamFree, "name", "form.error.spam");
+		}
+
+		if(!errors.hasErrors("description")) {
+			final Configuration sc = this.repository.findConfiguration();
+			final boolean spamFree = this.checker.isSpam(entity.getDescription(), sc.getStrongSpam(),sc.getWeakSpam(),sc.getStrongSpamThreshold(),sc.getWeakSpamThreshold());
+			errors.state(request, spamFree, "description", "form.error.spam");
+		}
 	}
 	
 	@Override
