@@ -15,6 +15,8 @@ package acme.features.inventor.toolkit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.checker.SpamChecker;
+import acme.entities.Configuration;
 import acme.entities.Toolkit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -29,6 +31,9 @@ public class InventorToolkitUpdateService implements AbstractUpdateService<Inven
 
 	@Autowired
 	protected InventorToolkitRepository repository;
+	
+	@Autowired
+	protected SpamChecker checker;
 
 	// AbstractCreateService<Inventor, Toolkit> interface -------------------------
 
@@ -43,7 +48,7 @@ public class InventorToolkitUpdateService implements AbstractUpdateService<Inven
 		masterId = request.getModel().getInteger("id");
 		toolkit = this.repository.findOneToolkitById(masterId);
 		final int inventorId = request.getPrincipal().getAccountId();
-		Inventor inventor = this.repository.findOneInventorById(inventorId);
+		final Inventor inventor = this.repository.findOneInventorById(inventorId);
 		result = !toolkit.isPublish() && request.isPrincipal(inventor);
 
 		return result;
@@ -54,6 +59,24 @@ public class InventorToolkitUpdateService implements AbstractUpdateService<Inven
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		if(!errors.hasErrors("title")) {
+			final Configuration sc = this.repository.findConfiguration();
+			final boolean spamFree = this.checker.isSpam(entity.getTitle(), sc.getStrongSpam(),sc.getWeakSpam(),sc.getStrongSpamThreshold(),sc.getWeakSpamThreshold());
+			errors.state(request, spamFree, "title", "form.error.spam");
+		}
+
+		if(!errors.hasErrors("description")) {
+			final Configuration sc = this.repository.findConfiguration();
+			final boolean spamFree = this.checker.isSpam(entity.getDescription(), sc.getStrongSpam(),sc.getWeakSpam(),sc.getStrongSpamThreshold(),sc.getWeakSpamThreshold());
+			errors.state(request, spamFree, "description", "form.error.spam");
+		}
+		
+		if(!errors.hasErrors("assemblyNotes")) {
+			final Configuration sc = this.repository.findConfiguration();
+			final boolean spamFree = this.checker.isSpam(entity.getAssemblyNotes(), sc.getStrongSpam(),sc.getWeakSpam(),sc.getStrongSpamThreshold(),sc.getWeakSpamThreshold());
+			errors.state(request, spamFree, "assemblyNotes", "form.error.spam");
+		}
 	}
 
 	@Override
