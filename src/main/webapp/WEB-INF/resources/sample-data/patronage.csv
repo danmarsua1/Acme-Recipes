@@ -14,4 +14,4 @@ patronage-12,DENIED,COD-012-A,Legal,USD 10.0,2022/09/01 10:00,2022/10/02 11:00,2
 patronage-13,DENIED,COD-013-A,Legal,EUR 10.0,2022/09/01 10:00,2022/10/03 11:00,2022/12/01 12:00,https://www.link13.com,patron-02,inventor-02
 patronage-14,DENIED,COD-014-A,Legal,USD 11.0,2022/09/01 10:00,2022/10/04 11:00,2022/12/01 12:00,https://www.link14.com,patron-03,inventor-03
 patronage-15,ACCEPTED,COD-015-A,Legal,USD 10.0,2022/08/19 10:00,2022/09/20 11:00,2022/10/27 11:00,https://www.link15.com,patron-04,inventor-04
-patronage-16,PROPOSED,COD-016-A,Legal,USD 10.0,2022/07/19 10:00,2022/09/01 11:00,2022/10/27 9:00,https://www.link16.com,patron-04,inventor-04
+patronage-16,PROPOSED,COD-016-A,Legal,USD 10.0,2022/07/19 10:00,2022/09/01 11:00,2022/10/27 09:00,https://www.link16.com,patron-04,inventor-04
