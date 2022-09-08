@@ -19,7 +19,7 @@ public class PatronPatronageListTest extends TestHarness {
 		
 		super.clickOnMenu("Patron", "List Patronages");
 		super.checkListingExists();
-		super.sortListing(0, "desc");
+		super.sortListing(0, "asc");
 		
 		super.checkColumnHasValue(recordIndex, 0, initDate);
 		super.checkColumnHasValue(recordIndex, 1, finishDate);

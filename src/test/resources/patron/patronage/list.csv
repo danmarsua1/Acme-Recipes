@@ -1,2 +1,5 @@
 recordIndex,status,code,legal-stuff,budget,creation-moment,init-date,finish-date,link
-0,PROPOSED,COD-001-A,Legal,EUR 10.00,2022/08/20 10:00,2022/08/20 11:00,2022/09/20 11:00,https://www.link1.com
+0,ACCEPTED,COD-010-A,Legal,EUR 16.00,2022/08/20 10:00,2022/09/21 11:00,2022/11/20 11:00,https://www.link10.com
+1,PROPOSED,COD-001-A,Legal,EUR 10.00,2022/08/21 10:00,2022/09/21 11:00,2022/10/22 11:00,https://www.link1.com
+2,DENIED,COD-012-A,Legal,USD 10.00,2022/09/01 10:00,2022/10/02 11:00,2022/12/01 12:00,https://www.link12.com
+3,PROPOSED,COD-007-A,Illegal,GBP 8.00,2022/09/01 10:00,2022/10/03 11:00,2022/12/01 12:00,https://www.link7.com

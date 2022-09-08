@@ -79,7 +79,7 @@
 		<sec:authorize access="hasRole('Inventor')">
 			<acme:menu-option code="master.menu.inventor">
 			    <acme:menu-suboption code="master.menu.inventor.items"
-					action="/inventor/item/list" />
+					action="/inventor/item/list-mine" />
 				<acme:menu-suboption code="master.menu.inventor.items.create"
 					action="/inventor/item/create" />
 				<acme:menu-suboption code="master.menu.inventor.toolkits"
